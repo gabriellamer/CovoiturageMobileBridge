@@ -36,7 +36,7 @@ if(isset($_POST['idUser']) &&
     $province = sql_safe($_POST['province']);
     $postCode = sql_safe($_POST['postCode']);
 
-    if(!empty($idUser)) {
+    if(empty($idUser)) {
         sql_open();
 
         $result = sql_query("
@@ -45,10 +45,10 @@ if(isset($_POST['idUser']) &&
         ");
 
         if(!$result) {
+            sql_close();
+
             $response["success"] = 0;
             $response["message"] = "Erreur!";
-
-            sql_close();
 
             echo json_encode($response);
         }
@@ -74,7 +74,61 @@ if(isset($_POST['idUser']) &&
             echo json_encode($response);
         }
     } else {
+        sql_open();
 
+        $result = sql_query("
+            UPDATE T_USER
+            SET F_LASTNAME = '$lastname', F_NAME = '$name', F_USERNAME = '$username', F_PASSWORD = '$password', F_PHONE = '$phone', F_EMAIL = '$email', F_SEXE = '$sexe', F_AGE = '$age'
+            WHERE F_ID_USER = '$idUser'
+        ");
+
+        if(!$result) {
+            sql_close();
+
+            $response["success"] = 0;
+            $response["message"] = "Erreur!";
+
+            echo json_encode($response);
+        }
+
+        $result = sql_query("
+            SELECT F_ID_ADDRESS
+            FROM T_USER
+            WHERE F_ID_USER = '$idUser'
+        ");
+
+        if(!$result) {
+            sql_close();
+
+            $response["success"] = 0;
+            $response["message"] = "Erreur!";
+
+            echo json_encode($response);
+        }
+
+        while ($row = sql_fetch_array($result)) {
+            $idAddress = $row[0];
+        }
+
+        $result = sql_query("
+            UPDATE T_ADDRESS
+            SET F_STREET_NB = '$streetNb', F_STREET_NAME = '$streetName', F_APP_NB = '$appNb', F_CITY = '$city', F_PROVINCE = '$province', F_POST_CODE = '$postCode'
+            WHERE F_ID_ADDRESS = '$idAddress'
+        ");
+
+        sql_close();
+
+        if(result) {
+            $response["success"] = 1;
+            $response["message"] = "Mise à jour de l'utilisateur complété!";
+
+            echo json_encode($response);
+        } else {
+            $response["success"] = 0;
+            $response["message"] = "Erreur!";
+
+            echo json_encode($response);
+        }
     }
 } else {
     $response["success"] = 0;

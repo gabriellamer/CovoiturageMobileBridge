@@ -4,7 +4,7 @@ require_once("sys/inc/database.php");
 
 $response = array();
 
-if(isset($_POST['idUser'])) {
+if(isset($_POST['idUser']) && !empty($_POST['idUser'])) {
 
     $idUser = sql_safe($_POST['idUser']);
 
@@ -17,6 +17,8 @@ if(isset($_POST['idUser'])) {
         ");
 
     if(!$result) {
+        sql_close();
+
         $response["success"] = 0;
         $response["message"] = "Erreur!";
 
@@ -33,6 +35,8 @@ if(isset($_POST['idUser'])) {
     ");
 
     if(!$result) {
+        sql_close();
+
         $response["success"] = 0;
         $response["message"] = "Erreur!";
 
@@ -43,6 +47,8 @@ if(isset($_POST['idUser'])) {
         DELETE FROM T_ADDRESS
         WHERE F_ID_ADDRESS = '$idAddress'
     ");
+
+    sql_close();
 
     if(!$result) {
         $response["success"] = 0;
