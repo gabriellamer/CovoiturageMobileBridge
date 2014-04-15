@@ -11,12 +11,23 @@ if(isset($_POST['idAd']) && !empty($_POST['idAd'])) {
     sql_open();
 
     $result = sql_query("
-        SELECT F_ID_USER, F_DRIVER, F_TITLE, F_DESCRIPTION, F_NB_PLACE, F_AIR_CONDITIONNER, F_HEATER
-        FROM T_AD
-        WHERE F_ID_AD = '$idAd'
+        SELECT *
+        FROM T_AD ad
+        LEFT JOIN T_USER u ON ad.F_ID_USER = u.F_ID_USER
+        LEFT JOIN T_ADDRESS a u.F_ID_ADDRESS = a.F_ID_ADDRESS
+        WHERE ad.F_ID_AD = '$idAd'
     ");
 
     if(!$result) {
+        sql_close();
+
+        $response["success"] = 0;
+        $response["message"] = "Erreur!";
+
+        echo json_encode($response);
+    }
+
+    if(mysqli_num_rows($result) != 1) {
         sql_close();
 
         $response["success"] = 0;
