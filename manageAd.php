@@ -54,7 +54,7 @@ if(isset($_POST['idAd']) &&
 
         sql_close();
 
-        if(result) {
+        if($result) {
             $response["success"] = 1;
             $response["message"] = "Mise à jour de l'annonce complété!";
 
