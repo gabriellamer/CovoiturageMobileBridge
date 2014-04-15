@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="ba2d22b7-6a7d-47f0-8982-768b548f4e4b" name="Default" comment="" />
+    <list default="true" id="ba2d22b7-6a7d-47f0-8982-768b548f4e4b" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gitignore" afterPath="$PROJECT_DIR$/.gitignore" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/selectAllAds.php" afterPath="$PROJECT_DIR$/selectAllAds.php" />
+    </list>
     <ignored path="CovoiturageMobileBridge.iws" />
     <ignored path=".idea/workspace.xml" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -23,42 +26,12 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="selectAllAds.php" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="selectAllAds.php" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/selectAllAds.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.0" vertical-offset="0" max-vertical-offset="90">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="selectUser.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/selectUser.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="11" column="0" selection-start="321" selection-end="321" vertical-scroll-proportion="-0.0" vertical-offset="165" max-vertical-offset="1530">
+            <state line="41" column="36" selection-start="900" selection-end="900" vertical-scroll-proportion="0.7565543" vertical-offset="9" max-vertical-offset="810">
               <folding>
-                <marker date="1397525426000" expanded="true" signature="54:171" placeholder="INSERT INTO ..." />
-                <marker date="1397525426000" expanded="true" signature="410:534" placeholder="SELECT F_ID_..T_USER..." />
-                <marker date="1397525426000" expanded="true" signature="463:611" placeholder="INSERT INTO ..." />
-                <marker date="1397525426000" expanded="true" signature="989:1067" placeholder="UPDATE T_USE..." />
-                <marker date="1397525426000" expanded="true" signature="1112:1422" placeholder="SELECT u.F_L..T_USER..." />
-                <marker date="1397525426000" expanded="true" signature="1497:1608" placeholder="SELECT F_ID_..T_USER..." />
-                <marker date="1397525426000" expanded="true" signature="2071:2168" placeholder="UPDATE T_ADD..." />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="manageUser.php" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/manageUser.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="119" column="0" selection-start="3963" selection-end="3963" vertical-scroll-proportion="0.5431472" vertical-offset="1357" max-vertical-offset="2145">
-              <folding>
-                <marker date="1397604201000" expanded="true" signature="1668:1852" placeholder="INSERT INTO ..." />
-                <marker date="1397604201000" expanded="true" signature="2133:2360" placeholder="INSERT INTO ..." />
-                <marker date="1397604201000" expanded="true" signature="2801:3039" placeholder="UPDATE T_USE..." />
-                <marker date="1397604201000" expanded="true" signature="3281:3364" placeholder="SELECT F_ID_..T_USER..." />
-                <marker date="1397604201000" expanded="true" signature="3701:3928" placeholder="UPDATE T_ADD..." />
+                <marker date="1397604972000" expanded="true" signature="256:402" placeholder="SELECT F_ID_..T_AD..." />
               </folding>
             </state>
           </provider>
@@ -67,8 +40,20 @@
       <file leaf-file-name="selectAd.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/selectAd.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="90">
+            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.0" vertical-offset="0" max-vertical-offset="90">
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="manageAd.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/manageAd.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="28" column="114" selection-start="944" selection-end="1029" vertical-scroll-proportion="-9.375" vertical-offset="195" max-vertical-offset="1185">
+              <folding>
+                <marker date="1397603969000" expanded="true" signature="927:1140" placeholder="INSERT INTO ..." />
+                <marker date="1397603969000" expanded="true" signature="1577:1824" placeholder="UPDATE T_AD ..." />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -91,6 +76,8 @@
         <option value="$PROJECT_DIR$/selectUser.php" />
         <option value="$PROJECT_DIR$/manageAd.php" />
         <option value="$PROJECT_DIR$/manageUser.php" />
+        <option value="$PROJECT_DIR$/.gitignore" />
+        <option value="$PROJECT_DIR$/selectAllAds.php" />
       </list>
     </option>
   </component>
@@ -267,7 +254,9 @@
     <entry file="file://$PROJECT_DIR$/selectAllAds.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="90">
-          <folding />
+          <folding>
+            <marker date="1397604972000" expanded="true" signature="256:402" placeholder="SELECT F_ID_..T_AD..." />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -275,13 +264,8 @@
       <provider selected="true" editor-type-id="text-editor">
         <state line="11" column="0" selection-start="321" selection-end="321" vertical-scroll-proportion="0.0" vertical-offset="165" max-vertical-offset="1530">
           <folding>
-            <marker date="1397525426000" expanded="true" signature="54:171" placeholder="INSERT INTO ..." />
-            <marker date="1397525426000" expanded="true" signature="410:534" placeholder="SELECT F_ID_..T_USER..." />
-            <marker date="1397525426000" expanded="true" signature="463:611" placeholder="INSERT INTO ..." />
-            <marker date="1397525426000" expanded="true" signature="989:1067" placeholder="UPDATE T_USE..." />
-            <marker date="1397525426000" expanded="true" signature="1112:1422" placeholder="SELECT u.F_L..T_USER..." />
-            <marker date="1397525426000" expanded="true" signature="1497:1608" placeholder="SELECT F_ID_..T_USER..." />
-            <marker date="1397525426000" expanded="true" signature="2071:2168" placeholder="UPDATE T_ADD..." />
+            <marker date="1397525426000" expanded="true" signature="-1:-1" placeholder="SELECT F_ID_..T_USER..." />
+            <marker date="1397525426000" expanded="true" signature="-1:-1" placeholder="SELECT u.F_L..T_USER..." />
           </folding>
         </state>
       </provider>
@@ -290,8 +274,8 @@
       <provider selected="true" editor-type-id="text-editor">
         <state line="8" column="30" selection-start="220" selection-end="220" vertical-scroll-proportion="0.0" vertical-offset="120" max-vertical-offset="1170">
           <folding>
-            <marker date="1397603969000" expanded="true" signature="-1:-1" placeholder="INSERT INTO ..." />
-            <marker date="1397603969000" expanded="true" signature="-1:-1" placeholder="UPDATE T_AD ..." />
+            <marker date="1397603969000" expanded="true" signature="927:1140" placeholder="INSERT INTO ..." />
+            <marker date="1397603969000" expanded="true" signature="1577:1824" placeholder="UPDATE T_AD ..." />
           </folding>
         </state>
       </provider>
@@ -310,20 +294,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/selectAd.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="825">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/selectAllAds.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="825">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/deleteAd.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="20" column="25" selection-start="368" selection-end="368" vertical-scroll-proportion="0.37453184" vertical-offset="0" max-vertical-offset="801">
@@ -338,40 +308,58 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/manageAd.php">
+    <entry file="file://$PROJECT_DIR$/manageUser.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="32" column="20" selection-start="1174" selection-end="1174" vertical-scroll-proportion="0.1357868" vertical-offset="373" max-vertical-offset="1185">
+        <state line="119" column="0" selection-start="3963" selection-end="3963" vertical-scroll-proportion="0.5431472" vertical-offset="1357" max-vertical-offset="2145">
           <folding>
-            <marker date="1397603969000" expanded="true" signature="-1:-1" placeholder="INSERT INTO ..." />
-            <marker date="1397603969000" expanded="true" signature="-1:-1" placeholder="UPDATE T_AD ..." />
+            <marker date="1397604201000" expanded="true" signature="-1:-1" placeholder="INSERT INTO ..." />
+            <marker date="1397604201000" expanded="true" signature="-1:-1" placeholder="INSERT INTO ..." />
+            <marker date="1397604201000" expanded="true" signature="-1:-1" placeholder="UPDATE T_USE..." />
+            <marker date="1397604201000" expanded="true" signature="-1:-1" placeholder="SELECT F_ID_..T_USER..." />
+            <marker date="1397604201000" expanded="true" signature="-1:-1" placeholder="UPDATE T_ADD..." />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/selectUser.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="11" column="0" selection-start="321" selection-end="321" vertical-scroll-proportion="0.0" vertical-offset="165" max-vertical-offset="1530">
+        <state line="11" column="0" selection-start="0" selection-end="2590" vertical-scroll-proportion="0.0" vertical-offset="165" max-vertical-offset="1530">
           <folding>
-            <marker date="1397525426000" expanded="true" signature="54:171" placeholder="INSERT INTO ..." />
-            <marker date="1397525426000" expanded="true" signature="410:534" placeholder="SELECT F_ID_..T_USER..." />
-            <marker date="1397525426000" expanded="true" signature="463:611" placeholder="INSERT INTO ..." />
-            <marker date="1397525426000" expanded="true" signature="989:1067" placeholder="UPDATE T_USE..." />
-            <marker date="1397525426000" expanded="true" signature="1112:1422" placeholder="SELECT u.F_L..T_USER..." />
-            <marker date="1397525426000" expanded="true" signature="1497:1608" placeholder="SELECT F_ID_..T_USER..." />
-            <marker date="1397525426000" expanded="true" signature="2071:2168" placeholder="UPDATE T_ADD..." />
+            <marker date="1397525426000" expanded="true" signature="-1:-1" placeholder="SELECT F_ID_..T_USER..." />
+            <marker date="1397525426000" expanded="true" signature="-1:-1" placeholder="SELECT u.F_L..T_USER..." />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/manageUser.php">
+    <entry file="file://$PROJECT_DIR$/selectAd.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="119" column="0" selection-start="3963" selection-end="3963" vertical-scroll-proportion="0.5431472" vertical-offset="1357" max-vertical-offset="2145">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="825">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="825">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/manageAd.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="28" column="114" selection-start="944" selection-end="1029" vertical-scroll-proportion="-9.375" vertical-offset="195" max-vertical-offset="1185">
           <folding>
-            <marker date="1397604201000" expanded="true" signature="1668:1852" placeholder="INSERT INTO ..." />
-            <marker date="1397604201000" expanded="true" signature="2133:2360" placeholder="INSERT INTO ..." />
-            <marker date="1397604201000" expanded="true" signature="2801:3039" placeholder="UPDATE T_USE..." />
-            <marker date="1397604201000" expanded="true" signature="3281:3364" placeholder="SELECT F_ID_..T_USER..." />
-            <marker date="1397604201000" expanded="true" signature="3701:3928" placeholder="UPDATE T_ADD..." />
+            <marker date="1397603969000" expanded="true" signature="927:1140" placeholder="INSERT INTO ..." />
+            <marker date="1397603969000" expanded="true" signature="1577:1824" placeholder="UPDATE T_AD ..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/selectAllAds.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="41" column="36" selection-start="900" selection-end="900" vertical-scroll-proportion="0.7565543" vertical-offset="9" max-vertical-offset="810">
+          <folding>
+            <marker date="1397604972000" expanded="true" signature="256:402" placeholder="SELECT F_ID_..T_AD..." />
           </folding>
         </state>
       </provider>
