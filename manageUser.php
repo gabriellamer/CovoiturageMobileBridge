@@ -118,7 +118,7 @@ if(isset($_POST['idUser']) &&
 
         sql_close();
 
-        if(result) {
+        if($result) {
             $response["success"] = 1;
             $response["message"] = "Mise à jour de l'utilisateur complété!";
 
