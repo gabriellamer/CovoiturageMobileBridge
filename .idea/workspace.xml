@@ -23,24 +23,23 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="selectAd.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/selectAd.php">
+      <file leaf-file-name="selectAllAds.php" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/selectAllAds.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="48" column="1" selection-start="1044" selection-end="1044" vertical-scroll-proportion="-30.0" vertical-offset="0" max-vertical-offset="810">
+            <state line="15" column="36" selection-start="403" selection-end="403" vertical-scroll-proportion="0.28089887" vertical-offset="0" max-vertical-offset="810">
               <folding>
-                <marker date="1397605211000" expanded="true" signature="256:402" placeholder="SELECT F_ID_..T_AD..." />
+                <marker date="1397605517000" expanded="true" signature="256:403" placeholder="SELECT F_ID_..T_AD..." />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="selectUser.php" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/selectUser.php">
+      <file leaf-file-name="selectAd.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/selectAd.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="61" column="42" selection-start="1714" selection-end="1714" vertical-scroll-proportion="0.49492386" vertical-offset="525" max-vertical-offset="1320">
+            <state line="15" column="30" selection-start="389" selection-end="389" vertical-scroll-proportion="-9.375" vertical-offset="0" max-vertical-offset="810">
               <folding>
-                <marker date="1397605211000" expanded="true" signature="410:534" placeholder="SELECT F_ID_..T_USER..." />
-                <marker date="1397605211000" expanded="true" signature="1112:1422" placeholder="SELECT u.F_L..T_USER..." />
+                <marker date="1397605517000" expanded="true" signature="248:390" placeholder="SELECT F_ID_..T_AD..." />
               </folding>
             </state>
           </provider>
@@ -64,9 +63,9 @@
         <option value="$PROJECT_DIR$/manageAd.php" />
         <option value="$PROJECT_DIR$/manageUser.php" />
         <option value="$PROJECT_DIR$/.gitignore" />
-        <option value="$PROJECT_DIR$/selectAllAds.php" />
-        <option value="$PROJECT_DIR$/selectAd.php" />
         <option value="$PROJECT_DIR$/selectUser.php" />
+        <option value="$PROJECT_DIR$/selectAd.php" />
+        <option value="$PROJECT_DIR$/selectAllAds.php" />
       </list>
     </option>
   </component>
@@ -192,7 +191,11 @@
       <created>1397605226895</created>
       <updated>1397605226895</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Changement dans sélectionner les annonces">
+      <created>1397605573961</created>
+      <updated>1397605573961</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -240,7 +243,8 @@
     <MESSAGE value="Régler quelques problèmes" />
     <MESSAGE value="Sélectionner toutes les annonces" />
     <MESSAGE value="Changement dans sélectionner un utilisateur" />
-    <option name="LAST_COMMIT_MESSAGE" value="Changement dans sélectionner un utilisateur" />
+    <MESSAGE value="Changement dans sélectionner les annonces" />
+    <option name="LAST_COMMIT_MESSAGE" value="Changement dans sélectionner les annonces" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -250,7 +254,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="90">
           <folding>
-            <marker date="1397604972000" expanded="true" signature="-1:-1" placeholder="SELECT F_ID_..T_AD..." />
+            <marker date="1397605517000" expanded="true" signature="256:403" placeholder="SELECT F_ID_..T_AD..." />
           </folding>
         </state>
       </provider>
@@ -259,8 +263,8 @@
       <provider selected="true" editor-type-id="text-editor">
         <state line="11" column="0" selection-start="321" selection-end="321" vertical-scroll-proportion="0.0" vertical-offset="165" max-vertical-offset="1530">
           <folding>
-            <marker date="1397605211000" expanded="true" signature="410:534" placeholder="SELECT F_ID_..T_USER..." />
-            <marker date="1397605211000" expanded="true" signature="1112:1422" placeholder="SELECT u.F_L..T_USER..." />
+            <marker date="1397605211000" expanded="true" signature="-1:-1" placeholder="SELECT F_ID_..T_USER..." />
+            <marker date="1397605211000" expanded="true" signature="-1:-1" placeholder="SELECT u.F_L..T_USER..." />
           </folding>
         </state>
       </provider>
@@ -279,7 +283,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="90">
           <folding>
-            <marker date="1397605211000" expanded="true" signature="256:402" placeholder="SELECT F_ID_..T_AD..." />
+            <marker date="1397605517000" expanded="true" signature="248:390" placeholder="SELECT F_ID_..T_AD..." />
           </folding>
         </state>
       </provider>
@@ -325,15 +329,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/selectAllAds.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="1044" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="810">
-          <folding>
-            <marker date="1397604972000" expanded="true" signature="-1:-1" placeholder="SELECT F_ID_..T_AD..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/manageAd.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="33" column="0" selection-start="1175" selection-end="1175" vertical-scroll-proportion="0.12436548" vertical-offset="397" max-vertical-offset="1185">
@@ -344,21 +339,30 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/selectAd.php">
+    <entry file="file://$PROJECT_DIR$/selectUser.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="48" column="1" selection-start="1044" selection-end="1044" vertical-scroll-proportion="-30.0" vertical-offset="0" max-vertical-offset="810">
+        <state line="61" column="42" selection-start="1714" selection-end="1714" vertical-scroll-proportion="0.48604062" vertical-offset="532" max-vertical-offset="1320">
           <folding>
-            <marker date="1397605211000" expanded="true" signature="256:402" placeholder="SELECT F_ID_..T_AD..." />
+            <marker date="1397605211000" expanded="true" signature="-1:-1" placeholder="SELECT F_ID_..T_USER..." />
+            <marker date="1397605211000" expanded="true" signature="-1:-1" placeholder="SELECT u.F_L..T_USER..." />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/selectUser.php">
+    <entry file="file://$PROJECT_DIR$/selectAd.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="61" column="42" selection-start="1714" selection-end="1714" vertical-scroll-proportion="0.49492386" vertical-offset="525" max-vertical-offset="1320">
+        <state line="15" column="30" selection-start="389" selection-end="389" vertical-scroll-proportion="-9.375" vertical-offset="0" max-vertical-offset="810">
           <folding>
-            <marker date="1397605211000" expanded="true" signature="410:534" placeholder="SELECT F_ID_..T_USER..." />
-            <marker date="1397605211000" expanded="true" signature="1112:1422" placeholder="SELECT u.F_L..T_USER..." />
+            <marker date="1397605517000" expanded="true" signature="248:390" placeholder="SELECT F_ID_..T_AD..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/selectAllAds.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="15" column="36" selection-start="403" selection-end="403" vertical-scroll-proportion="0.28089887" vertical-offset="0" max-vertical-offset="810">
+          <folding>
+            <marker date="1397605517000" expanded="true" signature="256:403" placeholder="SELECT F_ID_..T_AD..." />
           </folding>
         </state>
       </provider>

@@ -4,16 +4,16 @@ require_once("sys/inc/database.php");
 
 $response = array();
 
-if(isset($_POST['idUser']) && !empty($_POST['idUser'])) {
+if(isset($_POST['idAd']) && !empty($_POST['idAd'])) {
 
-    $idUser = sql_safe($_POST['idUser']);
+    $idAd = sql_safe($_POST['idAd']);
 
     sql_open();
 
     $result = sql_query("
         SELECT F_ID_USER, F_DRIVER, F_TITLE, F_DESCRIPTION, F_NB_PLACE, F_AIR_CONDITIONNER, F_HEATER
         FROM T_AD
-        WHERE F_ID_USER = '$idUser'
+        WHERE F_ID_AD = '$idAd'
     ");
 
     if(!$result) {
