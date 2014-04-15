@@ -59,21 +59,7 @@ if(isset($_POST['username']) && !empty($_POST['username']) &&
         }
 
         while ($row = sql_fetch_array($result)) {
-            $response["message"] = $row;
-            /*$lastname = $row[0];
-            $name = $row[1];
-            $username = $row[2];
-            $password = $row[3];
-            $phone = $row[4];
-            $email = $row[5];
-            $sexe = $row[6];
-            $age = $row[7];
-            $streetNb = $row[8];
-            $streetName = $row[9];
-            $appNb = $row[10];
-            $city = $row[11];
-            $province = $row[12];
-            $postCode = $row[13];*/
+            $response["message"][] = $row;
         }
 
         sql_close();
