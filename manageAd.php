@@ -2,25 +2,25 @@
 require_once("sys/inc/config.php");
 require_once("sys/inc/database.php");
 
-$response = array();
+$data = json_decode(utf8_encode(file_get_contents('php://input')));
 
-if(isset($_POST['idAd']) &&
-    isset($_POST['idUser']) && !empty($_POST['idUser']) &&
-    isset($_POST['driver']) &&
-    isset($_POST['title']) && !empty($_POST['title']) &&
-    isset($_POST['description']) && !empty($_POST['description']) &&
-    isset($_POST['nbPlace']) && !empty($_POST['nbPlace']) &&
-    isset($_POST['airConditionner']) &&
-    isset($_POST['heater'])) {
+if(isset($data->idAd) &&
+    isset($data->idUser) && !empty($data->idUser) &&
+    isset($data->driver) &&
+    isset($data->title) && !empty($data->title) &&
+    isset($data->description) && !empty($data->description) &&
+    isset($data->nbPlace) && !empty($data->nbPlace) &&
+    isset($data->airConditionner) &&
+    isset($data->heater)) {
 
-    $idAd = sql_safe($_POST['idAd']);
-    $idUser = sql_safe($_POST['idUser']);
-    $driver = sql_safe($_POST['driver']);
-    $title = sql_safe($_POST['title']);
-    $description = sql_safe($_POST['description']);
-    $nbPlace = sql_safe($_POST['nbPlace']);
-    $airConditionner = sql_safe($_POST['airConditionner']);
-    $heater = sql_safe($_POST['heater']);
+    $idAd = sql_safe($data->idAd);
+    $idUser = sql_safe($data->idUser);
+    $driver = sql_safe($data->driver);
+    $title = sql_safe($data->title);
+    $description = sql_safe($data->description);
+    $nbPlace = sql_safe($data->nbPlace);
+    $airConditionner = sql_safe($data->airConditionner);
+    $heater = sql_safe($data->heater);
 
     if(empty($idAd)) {
         sql_open();
@@ -30,18 +30,14 @@ if(isset($_POST['idAd']) &&
             VALUES('$idUser', '$driver', '$title', '$description', '$nbPlace', '$airConditionner', '$heater')
         ");
 
+        $idAd = sql_insert_id();
+
         sql_close();
 
         if($result) {
-            $response["success"] = 1;
-            $response["message"] = "Création de l'annonce complété!";
-
-            echo json_encode($response);
+            echo $idAd;
         } else {
-            $response["success"] = 0;
-            $response["message"] = "Erreur!";
-
-            echo json_encode($response);
+            echo null;
         }
     } else {
         sql_open();
@@ -56,7 +52,7 @@ if(isset($_POST['idAd']) &&
 
         if($result) {
             $response["success"] = 1;
-            $response["message"] = "Mise à jour de l'annonce complété!";
+            $response["message"] = $idAd;
 
             echo json_encode($response);
         } else {

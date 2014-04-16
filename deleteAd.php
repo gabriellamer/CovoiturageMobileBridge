@@ -2,11 +2,11 @@
 require_once("sys/inc/config.php");
 require_once("sys/inc/database.php");
 
-$response = array();
+$data = json_decode(utf8_encode(file_get_contents('php://input')));
 
-if(isset($_POST['idAd']) && !empty($_POST['idAd'])) {
+if(isset($data->idAd) && !empty($data->idAd)) {
 
-    $idAd = sql_safe($_POST['idAd']);
+    $idAd = sql_safe($data->idAd);
 
     sql_open();
 
@@ -24,7 +24,7 @@ if(isset($_POST['idAd']) && !empty($_POST['idAd'])) {
         echo json_encode($response);
     } else {
         $reponse["success"] = 1;
-        $response["message"] = "Suppression de l'annonce complété!";
+        $response["message"] = $idAd;
     }
 } else {
     $response["success"] = 0;

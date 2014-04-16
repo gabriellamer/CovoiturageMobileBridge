@@ -2,39 +2,39 @@
 require_once("sys/inc/config.php");
 require_once("sys/inc/database.php");
 
-$response = array();
+$data = json_decode(utf8_encode(file_get_contents('php://input')));
 
-if(isset($_POST['idUser']) &&
-    isset($_POST['lastname']) && !empty($_POST['lastname']) &&
-    isset($_POST['name']) && !empty($_POST['name']) &&
-    isset($_POST['username']) && !empty($_POST['username']) &&
-    isset($_POST['password']) && !empty($_POST['password']) &&
-    isset($_POST['phone']) && !empty($_POST['phone']) &&
-    isset($_POST['email']) && !empty($_POST['email']) &&
-    isset($_POST['sexe']) && !empty($_POST['sexe']) &&
-    isset($_POST['age']) && !empty($_POST['age']) &&
-    isset($_POST['streetNb']) && !empty($_POST['streetNb']) &&
-    isset($_POST['streetName']) && !empty($_POST['streetName']) &&
-    isset($_POST['appNb']) &&
-    isset($_POST['city']) && !empty($_POST['city']) &&
-    isset($_POST['province']) && !empty($_POST['province']) &&
-    isset($_POST['postCode']) && !empty($_POST['postCode'])) {
+if(isset($data->idUser) &&
+    isset($data->lastname) && !empty($data->lastname) &&
+    isset($data->name) && !empty($data->name) &&
+    isset($data->username) && !empty($data->username) &&
+    isset($data->password) && !empty($data->password) &&
+    isset($data->phone) && !empty($data->phone) &&
+    isset($data->email) && !empty($data->email) &&
+    isset($data->sexe) && !empty($data->sexe) &&
+    isset($data->age) && !empty($data->age) &&
+    isset($data->streetNb) && !empty($data->streetNb) &&
+    isset($data->streetName) && !empty($data->streetName) &&
+    isset($data->appNb) &&
+    isset($data->city) && !empty($data->city) &&
+    isset($data->province) && !empty($data->province) &&
+    isset($data->postCode) && !empty($data->postCode)) {
 
-    $idUser = sql_safe($_POST['idUser']);
-    $lastname = sql_safe($_POST['lastname']);
-    $name = sql_safe($_POST['name']);
-    $username = sql_safe($_POST['username']);
-    $password = sql_safe($_POST['password']);
-    $phone = sql_safe($_POST['phone']);
-    $email = sql_safe($_POST['email']);
-    $sexe = sql_safe($_POST['sexe']);
-    $age = sql_safe($_POST['age']);
-    $streetNb = sql_safe($_POST['streetNb']);
-    $streetName = sql_safe($_POST['streetName']);
-    $appNb = sql_safe($_POST['appNb']);
-    $city = sql_safe($_POST['city']);
-    $province = sql_safe($_POST['province']);
-    $postCode = sql_safe($_POST['postCode']);
+    $idUser = sql_safe($data->idUser);
+    $lastname = sql_safe($data->lastname);
+    $name = sql_safe($data->name);
+    $username = sql_safe($data->username);
+    $password = sql_safe($data->password);
+    $phone = sql_safe($data->phone);
+    $email = sql_safe($data->email);
+    $sexe = sql_safe($data->sexe);
+    $age = sql_safe($data->age);
+    $streetNb = sql_safe($data->streetNb);
+    $streetName = sql_safe($data->streetName);
+    $appNb = sql_safe($data->appNb);
+    $city = sql_safe($data->city);
+    $province = sql_safe($data->province);
+    $postCode = sql_safe($data->postCode);
 
     if(empty($idUser)) {
         sql_open();
@@ -60,11 +60,13 @@ if(isset($_POST['idUser']) &&
             VALUES('$idAddress', '$lastname', '$name', '$username', '$password', '$phone', '$email', '$sexe', '$age')
         ");
 
+        $idUser = sql_insert_id();
+
         sql_close();
 
         if($result) {
             $response["success"] = 1;
-            $response["message"] = "Création de l'utilisateur complété!";
+            $response["message"] = $idUser;
 
             echo json_encode($response);
         } else {
@@ -120,7 +122,7 @@ if(isset($_POST['idUser']) &&
 
         if($result) {
             $response["success"] = 1;
-            $response["message"] = "Mise à jour de l'utilisateur complété!";
+            $response["message"] = $idUser;
 
             echo json_encode($response);
         } else {

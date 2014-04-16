@@ -2,11 +2,11 @@
 require_once("sys/inc/config.php");
 require_once("sys/inc/database.php");
 
-$response = array();
+$data = json_decode(utf8_encode(file_get_contents('php://input')));
 
-if(isset($_POST['idUser']) && !empty($_POST['idUser'])) {
+if(isset($data->idUser) && !empty($data->idUser)) {
 
-    $idUser = sql_safe($_POST['idUser']);
+    $idUser = sql_safe($data->idUser);
 
     sql_open();
 
