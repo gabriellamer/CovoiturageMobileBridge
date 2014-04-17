@@ -15,7 +15,7 @@ if(isset($data->idAd) && !empty($data->idAd)) {
         FROM T_AD ad
         LEFT JOIN T_USER u ON ad.F_ID_USER = u.F_ID_USER
         LEFT JOIN T_ADDRESS a u.F_ID_ADDRESS = a.F_ID_ADDRESS
-        WHERE ad.F_ID_AD = '$idAd'
+        WHERE ad.F_ID_AD = " . $idAd . "
     ");
 
     if(!$result) {

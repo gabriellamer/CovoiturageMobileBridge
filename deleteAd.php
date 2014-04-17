@@ -12,7 +12,7 @@ if(isset($data->idAd) && !empty($data->idAd)) {
 
     $result = sql_query("
         DELETE FROM T_AD
-        WHERE F_ID_AD = '$idAd'
+        WHERE F_ID_AD = " . $idAd . "
     ");
 
     sql_close();

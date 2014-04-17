@@ -41,7 +41,7 @@ if(isset($data->idUser) &&
 
         $result = sql_query("
             INSERT INTO T_ADDRESS(F_STREET_NB, F_STREET_NAME, F_APP_NB, F_CITY, F_PROVINCE, F_POST_CODE)
-            VALUES('$streetNb', '$streetName', '$appNb', '$city', '$province', '$postCode')
+            VALUES(" . $streetNb . ", '" . $streetName . "', " . $appNb . ", '" . $city . "', '" . $province . "', '" . $postCode . "')
         ");
 
         if(!$result) {
@@ -57,7 +57,7 @@ if(isset($data->idUser) &&
 
         $result = sql_query("
             INSERT INTO T_USER(F_ID_ADDRESS, F_LASTNAME, F_NAME, F_USERNAME, F_PASSWORD, F_PHONE, F_EMAIL, F_SEXE, F_AGE)
-            VALUES('$idAddress', '$lastname', '$name', '$username', '$password', '$phone', '$email', '$sexe', '$age')
+            VALUES(" . $idAddress . ", '" . $lastname . "', '" . $name . "', '" . $username . "', '" . $password . "', '" . $phone . "', '" . $email . "', '" . $sexe . "', " . $age . ")
         ");
 
         $idUser = sql_insert_id();
@@ -80,8 +80,8 @@ if(isset($data->idUser) &&
 
         $result = sql_query("
             UPDATE T_USER
-            SET F_LASTNAME = '$lastname', F_NAME = '$name', F_USERNAME = '$username', F_PASSWORD = '$password', F_PHONE = '$phone', F_EMAIL = '$email', F_SEXE = '$sexe', F_AGE = '$age'
-            WHERE F_ID_USER = '$idUser'
+            SET F_LASTNAME = '" . $lastname . "', F_NAME = '" . $name . "', F_USERNAME = '" . $username . "', F_PASSWORD = '" . $password . "', F_PHONE = '" . $phone . "', F_EMAIL = '" . $email . "', F_SEXE = '" . $sexe . "', F_AGE = " . $age . "
+            WHERE F_ID_USER = " . $idUser . "
         ");
 
         if(!$result) {
@@ -96,7 +96,7 @@ if(isset($data->idUser) &&
         $result = sql_query("
             SELECT F_ID_ADDRESS
             FROM T_USER
-            WHERE F_ID_USER = '$idUser'
+            WHERE F_ID_USER = " . $idUser . "
         ");
 
         if(!$result) {
@@ -114,7 +114,7 @@ if(isset($data->idUser) &&
 
         $result = sql_query("
             UPDATE T_ADDRESS
-            SET F_STREET_NB = '$streetNb', F_STREET_NAME = '$streetName', F_APP_NB = '$appNb', F_CITY = '$city', F_PROVINCE = '$province', F_POST_CODE = '$postCode'
+            SET F_STREET_NB = " . $streetNb . ", F_STREET_NAME = '" . $streetName . "', F_APP_NB = " . $appNb . ", F_CITY = '" . $city . "', F_PROVINCE = '" . $province . "', F_POST_CODE = '" . $postCode . "'
             WHERE F_ID_ADDRESS = '$idAddress'
         ");
 

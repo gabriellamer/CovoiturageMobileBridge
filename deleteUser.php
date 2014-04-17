@@ -13,7 +13,7 @@ if(isset($data->idUser) && !empty($data->idUser)) {
     $result = sql_query("
             SELECT F_ID_ADDRESS
             FROM T_USER
-            WHERE F_ID_USER = '$idUser'
+            WHERE F_ID_USER = " . $idUser . "
         ");
 
     if(!$result) {
@@ -25,13 +25,15 @@ if(isset($data->idUser) && !empty($data->idUser)) {
         echo json_encode($response);
     }
 
+    $idAddress = null;
+
     while ($row = sql_fetch_array($result)) {
         $idAddress = $row[0];
     }
 
     $result = sql_query("
         DELETE FROM T_USER
-        WHERE F_ID_USER = '$idUser'
+        WHERE F_ID_USER = " . $idUser . "
     ");
 
     if(!$result) {
@@ -45,7 +47,7 @@ if(isset($data->idUser) && !empty($data->idUser)) {
 
     $result = sql_query("
         DELETE FROM T_ADDRESS
-        WHERE F_ID_ADDRESS = '$idAddress'
+        WHERE F_ID_ADDRESS = " . $idAddress . "
     ");
 
     sql_close();

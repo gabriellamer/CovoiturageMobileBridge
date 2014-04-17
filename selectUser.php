@@ -15,8 +15,8 @@ if(isset($data->username) && !empty($data->username) &&
     $result = sql_query("
         SELECT F_ID_USER
         FROM T_USER
-        WHERE F_USERNAME = '$username'
-        AND F_PASSWORD = '$password'
+        WHERE F_USERNAME = '" . $username . "'
+        AND F_PASSWORD = '" . $password . "'
     ");
 
     if(!$result) {
@@ -45,7 +45,7 @@ if(isset($data->username) && !empty($data->username) &&
         SELECT u.F_LASTNAME, u.F_NAME, u.F_USERNAME, u.F_PASSWORD, u.F_PHONE, u.F_EMAIL, u.F_SEXE, u.F_AGE, a.F_STREET_NB, a.F_STREET_NAME, a.F_APP_NB, a.F_CITY, a.F_PROVINCE, a.F_POST_CODE
         FROM T_USER u
         LEFT JOIN T_ADDRESS a on a.F_ID_USER = u.F_ID_USER
-        WHERE F_ID_USER = '$idUser'
+        WHERE F_ID_USER = " . $idUser . "
     ");
 
     if(!$result) {

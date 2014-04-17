@@ -13,7 +13,7 @@ if(isset($data->idUser) && !empty($data->idUser)) {
     $result = sql_query("
         SELECT F_ID_USER, F_DRIVER, F_TITLE, F_DESCRIPTION, F_NB_PLACE, F_AIR_CONDITIONNER, F_HEATER
         FROM T_AD
-        WHERE F_ID_USER != '$idUser'
+        WHERE F_ID_USER != " . $idUser . "
     ");
 
     if(!$result) {
