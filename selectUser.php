@@ -48,7 +48,7 @@ if(isset($data->username) && !empty($data->username) &&
     }
 
     $result = sql_query("
-        SELECT u.F_ID_USER, u.F_LASTNAME, u.F_NAME, u.F_USERNAME, u.F_PASSWORD, u.F_PHONE, u.F_EMAIL, u.F_SEX, u.F_AGE, a.F_STREET_NB, a.F_STREET_NAME, a.F_APP_NB, a.F_CITY, a.F_PROVINCE, a.F_POST_CODE
+        SELECT u.F_ID_USER, u.F_LASTNAME, u.F_NAME, u.F_USERNAME, u.F_PASSWORD, u.F_PHONE, u.F_EMAIL, u.F_SEX, u.F_AGE, a.F_STREET_NB, a.F_STREET_NAME, a.F_APP_NB, a.F_CITY, a.F_PROVINCE, a.F_POST_CODE, a.F_LATITUDE, a.F_LONGITUDE
         FROM T_USER u
         LEFT JOIN T_ADDRESS a on a.F_ID_ADDRESS = u.F_ID_ADDRESS
         WHERE F_ID_USER = " . $idUser . "
